@@ -1,5 +1,5 @@
 body{
-	width: 95%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -7,6 +7,7 @@ body{
 #style{
 	background-color: #eafaff;
 	font-family: roboto;
+	font-weight: lighter;
 }
 
 #navbar{
@@ -14,15 +15,20 @@ body{
 	width: 24%;
 	position: fixed;
 	border-right: 3px solid black;
+	text-align: center;
+	overflow-y: scroll;
 	height: 100%;
 }
 
 #navbar header {
 	display: block;
-	width: 100%;
 	font-size: 28px;
 	padding: 15px;
 	border-bottom: 2px solid grey;
+	background-color: #282c34;
+	color: #61dafb;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #navbar a{
@@ -35,25 +41,28 @@ body{
 	border-bottom: 2px solid grey;
 }
 
-#navbar a: hover{
-	background-color: yellow;
+#navbar a:hover{
+	background-color:#282c34;
+	font-weight: bold;
+	color: #61dafb;
 }
 
 #content{
 	display: inline-block;
-	width:74%;
+	width:75%;
 	float: right;
 	margin: 0;
 }
 
-
 .main-section{
-		border-bottom: 2px solid #000000;
-		padding: 15px;
+	padding: 15px;
+	margin: 10px;
 }
+
 .main-section header{
 	font-size: 42px;
-
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: bold;
 }
 
 div{
@@ -63,14 +72,49 @@ div{
 	padding: 10px;
 	font-size: 15px;
 	text-align: left;
+	width: 100%;
+	overflow-x: scroll;
 }
 
 div pre span{
 	text-align: left;
 	float: left;
 	font-family: 'Open Sans Condensed', sans-serif;
+	color: #61dafb;
 }
 
+h3{
+	color: #666666;
+}
 
+footer{
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+	margin: 0;
+	min-height: 50px;
+	padding: 15px;
+	width: 100%;
+}
 
+footer p a{
+	text-decoration: none;
+	color: #61dafb;
+	font-weight: bold;
+}
 
+@media only screen and (max-width: 1050px) {
+#navbar{
+	display: block;
+	width: 100%;
+	position: sticky;
+	border: 0;
+}
+
+#content{
+	display: block;
+	float: left;
+	margin-top: 30px;
+	width: 100%
+}
+}
